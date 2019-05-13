@@ -59,6 +59,13 @@ System.out.println("Hashcode string3 " + Integer.toHexString(string3.hashCode())
 
 Dlatego poleceniem `javap -c StringTask.class` można wykonać disassemblację kodu i podejrzeć zachowanie w pamięci:
 
+Z Linia-2:
+
+![with_Linia-2](https://user-images.githubusercontent.com/26818304/57659160-9c301900-75e1-11e9-8fc9-33166610b537.PNG)
+
+Bez Linia-2:
+
+![without_Linia-2](https://user-images.githubusercontent.com/26818304/57659159-9c301900-75e1-11e9-93cf-8314a88407f5.PNG)
 
 
 Niestety dość ciężko jest mi zrozumieć poszczególne kody, ale przykładowo __astore_X__ (X - cyfra) oznacza przypisanie referencji utworzonej w puli do zmiennej lokalnej, jak widać w przypadku kompilacji bez Linia-2 przypisanie referencji utworzonej w puli do zmiennej lokalnej odbywa się dwa razy: astore_1 i astore_2. W przypadku gdy zwracany jest false występują astore_1, astore_2 i astore_3. 
